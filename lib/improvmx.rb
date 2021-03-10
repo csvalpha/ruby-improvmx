@@ -8,7 +8,7 @@ require 'improvmx/exceptions/exceptions'
 # Module for interaction with Improvmx
 module Improvmx
   class << self
-    attr_accessor :api_key, :domain
+    attr_accessor :api_key
 
     def configure
       yield self

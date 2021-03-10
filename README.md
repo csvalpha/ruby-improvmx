@@ -21,10 +21,10 @@ This is how you can use this gem
 require 'improvmx'
 
 # Instantiate the Client with your API key and domain
-client = Improvmx::Client.new 'your-api-key', 'domain.com'
+client = Improvmx::Client.new 'your-api-key'
 
 # List all the aliases
-aliases = client.list_aliases
+aliases = client.list_aliases('domain.com')
 
 puts aliases['aliases']
 ```
@@ -32,10 +32,10 @@ puts aliases['aliases']
 Improvmx has a rate limit system, to handle this you can do
 ```ruby
 require 'improvmx'
-client = Improvmx::Client.new 'your-api-key', 'domain.com'
+client = Improvmx::Client.new 'your-api-key'
 
 begin
-  client.list_aliases
+  client.list_aliases('domain.com')
 rescue Improvmx::RateLimitError => e
   sleep e.wait_seconds
   retry
