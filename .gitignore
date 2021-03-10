@@ -1,0 +1,11 @@
+*.gem
+*~
+.idea
+.bundle
+.env
+Gemfile.lock
+coverage/*
+doc/*
+log/*
+measurement/*
+pkg/*
