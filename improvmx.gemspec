@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.authors = ['C.S.V. Alpha', 'Matthijs Vos']
   spec.email = 'ict@csvalpha.nl'
 
-  spec.files = %w[LICENSE.md README.md improvmx.gemspec] + Dir['lib/**/*.rb']
+  spec.files = %w[LICENSE README.md improvmx.gemspec] + Dir['lib/**/*.rb']
   spec.require_paths = %w[lib]
 
   spec.required_ruby_version = '>= 2.4'

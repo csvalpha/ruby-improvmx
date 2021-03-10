@@ -56,3 +56,12 @@ will run all the tests.
 
 To setup the key information for testing copy `.env.example` to `.env` and fill in the details.
 
+
+Deployment
+------
+
+This part is for maintaincers only. In order to deploy this gem to rubygem follow those steps:
+
+1. Bump the version in `lib/improvmx/version.rb`
+1. Build the gem using `gem build improvmx.gemspec`
+1. Push it to rubygems `gem push improvmx-x.x.x.gem`
