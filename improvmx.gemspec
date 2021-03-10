@@ -16,5 +16,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = %w[lib]
 
   spec.required_ruby_version = '>= 2.4'
-  spec.add_dependency 'rest-client', '>= 2.0.2'
+  spec.add_dependency 'rest-client', '~> 2.0'
 end
