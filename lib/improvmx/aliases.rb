@@ -26,9 +26,8 @@ module Improvmx
     end
 
     def create_or_update_alias(alias_name, forward_to)
+      return true if update_alias(alias_name, forward_to)
       create_alias(alias_name, forward_to)
-    rescue BadRequestError
-      update_alias(alias_name, forward_to)
     end
 
     def delete_alias(alias_name)

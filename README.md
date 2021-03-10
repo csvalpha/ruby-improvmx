@@ -29,6 +29,20 @@ aliases = client.list_aliases
 puts aliases['aliases']
 ```
 
+Improvmx has a rate limit system, to handle this you can do
+```ruby
+require 'improvmx'
+client = Improvmx::Client.new 'your-api-key', 'domain.com'
+
+begin
+  client.list_aliases
+rescue Improvmx::RateLimitError => e
+  sleep e.wait_seconds
+  retry
+end
+
+```
+
 Rails
 -----
 
