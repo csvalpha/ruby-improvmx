@@ -52,7 +52,7 @@ module Improvmx
     def initialize(message = nil, response = nil)
       super(message, response)
 
-      reset_at = response.headers[:x_ratelimit_reset]
+      reset_at = response&.headers[:x_ratelimit_reset] || Time.now.to_i
       @wait_seconds = reset_at.to_i - Time.now.to_i
     end
   end
