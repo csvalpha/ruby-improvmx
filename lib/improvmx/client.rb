@@ -1,4 +1,5 @@
 require 'improvmx/aliases'
+require 'improvmx/smtp'
 require 'improvmx/response'
 require 'improvmx/utils'
 require 'improvmx/exceptions/exceptions'
@@ -6,6 +7,7 @@ require 'improvmx/exceptions/exceptions'
 module Improvmx
   class Client
     include Improvmx::Aliases
+    include Improvmx::SMTP
     include Improvmx::Utils
 
     def initialize(api_key = Improvmx.api_key)
