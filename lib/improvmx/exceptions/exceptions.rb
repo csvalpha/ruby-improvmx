@@ -53,7 +53,7 @@ module Improvmx
       super(message, response)
 
       if response
-        reset_at = response.headers.dig(:x_ratelimit_reset) || Time.now.to_i
+        reset_at = response.headers[:x_ratelimit_reset] || Time.now.to_i
         @wait_seconds = reset_at.to_i - Time.now.to_i
       else
         @wait_seconds = 0

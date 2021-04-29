@@ -16,7 +16,7 @@ module Improvmx
 
       response.ok?
     rescue NotFoundError
-      return true
+      true
     end
   end
 end

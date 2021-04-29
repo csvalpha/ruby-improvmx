@@ -22,3 +22,6 @@ Style/Documentation:
 
 Naming/MethodParameterName:
   AllowedNames: e
+
+RSpec/MultipleExpectations:
+  Enabled: false

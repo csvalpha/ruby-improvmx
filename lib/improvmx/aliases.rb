@@ -27,6 +27,7 @@ module Improvmx
 
     def create_or_update_alias(alias_name, forward_to, domain)
       return true if update_alias(alias_name, forward_to, domain)
+
       create_alias(alias_name, forward_to, domain)
     end
 
@@ -35,7 +36,7 @@ module Improvmx
 
       response.ok?
     rescue NotFoundError
-      return true
+      true
     end
   end
 end
