@@ -77,5 +77,5 @@ Deployment
 This part is for maintaincers only. In order to deploy this gem to rubygem follow those steps:
 
 1. Bump the version in `lib/improvmx/version.rb`
-1. Build the gem using `gem build improvmx.gemspec`
-1. Push it to rubygems `gem push improvmx-x.x.x.gem`
+2. Build the gem using `gem build improvmx.gemspec`
+3. Push it to rubygems `gem push improvmx-x.x.x.gem`
