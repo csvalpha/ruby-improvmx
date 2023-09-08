@@ -1,3 +1,3 @@
 module Improvmx
-  VERSION = '0.1.4'.freeze
+  VERSION = '0.2.1'.freeze
 end
