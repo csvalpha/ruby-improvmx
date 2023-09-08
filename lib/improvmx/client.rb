@@ -14,14 +14,17 @@ module Improvmx
       rest_client_params = {
         user: 'api',
         password: api_key,
-        user_agent: "improvmx-ruby/#{Improvmx::VERSION}"
+        user_agent: "improvmx-ruby/#{Improvmx::VERSION}",
+        headers: {
+          content_type: "application/json"
+        }
       }
 
       @http_client = RestClient::Resource.new('https://api.improvmx.com/v3', rest_client_params)
     end
 
     def post(resource_path, data, headers = {})
-      response = @http_client[resource_path].post(data, headers)
+      response = @http_client[resource_path].post(data.to_json, headers)
       Response.new(response)
     rescue StandardError => e
       raise communication_error e
@@ -35,7 +38,7 @@ module Improvmx
     end
 
     def put(resource_path, data)
-      response = @http_client[resource_path].put(data)
+      response = @http_client[resource_path].put(data.to_json)
       Response.new(response)
     rescue StandardError => e
       raise communication_error e
