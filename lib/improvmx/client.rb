@@ -1,4 +1,5 @@
 require 'improvmx/aliases'
+require 'improvmx/rules'
 require 'improvmx/smtp'
 require 'improvmx/response'
 require 'improvmx/utils'
@@ -7,6 +8,7 @@ require 'improvmx/exceptions/exceptions'
 module Improvmx
   class Client
     include Improvmx::Aliases
+    include Improvmx::Rules
     include Improvmx::SMTP
     include Improvmx::Utils
 
