@@ -29,7 +29,24 @@ aliases = client.list_aliases('domain.com')
 puts aliases['aliases']
 ```
 
-Improvmx has a rate limit system, to handle this you can do
+### Timeout Configuration
+
+You can configure custom timeout values when initializing the client:
+
+```ruby
+require 'improvmx'
+
+# Configure timeouts (in seconds)
+client = Improvmx::Client.new('your-api-key', {
+  read_timeout: 120,  # Time to wait for response (default: 60)
+  open_timeout: 30    # Time to wait for connection (default: 60)
+})
+```
+
+### Rate Limiting
+
+Improvmx has a rate limit system, to handle this you can do:
+
 ```ruby
 require 'improvmx'
 client = Improvmx::Client.new 'your-api-key'
