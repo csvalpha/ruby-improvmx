@@ -1,0 +1,18 @@
+current directory: /home/runner/work/ruby-improvmx/ruby-improvmx/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+/usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
+creating Makefile
+
+current directory: /home/runner/work/ruby-improvmx/ruby-improvmx/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20251210-3485-7p6ab2 sitelibdir\=./.gem.20251210-3485-7p6ab2 clean
+
+current directory: /home/runner/work/ruby-improvmx/ruby-improvmx/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20251210-3485-7p6ab2 sitelibdir\=./.gem.20251210-3485-7p6ab2
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/runner/work/ruby-improvmx/ruby-improvmx/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20251210-3485-7p6ab2 sitelibdir\=./.gem.20251210-3485-7p6ab2 install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20251210-3485-7p6ab2
+
+current directory: /home/runner/work/ruby-improvmx/ruby-improvmx/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20251210-3485-7p6ab2 sitelibdir\=./.gem.20251210-3485-7p6ab2 clean
