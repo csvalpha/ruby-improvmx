@@ -15,6 +15,6 @@ Gem::Specification.new do |spec|
   spec.files = %w[LICENSE README.md improvmx.gemspec] + Dir['lib/**/*.rb']
   spec.require_paths = %w[lib]
 
-  spec.required_ruby_version = '>= 2.4'
-  spec.add_dependency 'rest-client', '~> 2.0'
+  spec.required_ruby_version = '>= 3.0'
+  spec.add_dependency 'rest-client', '~> 2.1'
 end
