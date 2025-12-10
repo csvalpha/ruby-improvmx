@@ -10,18 +10,26 @@ module Improvmx
     include Improvmx::SMTP
     include Improvmx::Utils
 
-    def initialize(api_key = Improvmx.api_key)
+    # Default timeout values in seconds
+    DEFAULT_OPEN_TIMEOUT = 60
+    DEFAULT_READ_TIMEOUT = 60
+
+    # rubocop:disable Metrics/MethodLength
+    def initialize(api_key = Improvmx.api_key, options = {})
       rest_client_params = {
         user: 'api',
         password: api_key,
         user_agent: "improvmx-ruby/#{Improvmx::VERSION}",
+        timeout: options[:read_timeout] || DEFAULT_READ_TIMEOUT,
+        open_timeout: options[:open_timeout] || DEFAULT_OPEN_TIMEOUT,
         headers: {
-          content_type: "application/json"
+          content_type: 'application/json'
         }
       }
 
       @http_client = RestClient::Resource.new('https://api.improvmx.com/v3', rest_client_params)
     end
+    # rubocop:enable Metrics/MethodLength
 
     def post(resource_path, data, headers = {})
       response = @http_client[resource_path].post(data.to_json, headers)
