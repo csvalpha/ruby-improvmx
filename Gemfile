@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
 group :development do
-  gem 'bundler', '>= 2.2'
-  gem'dotenv', '~> 2.7.0'
-  gem'pry', '~> 0.14.0'
-  gem'rails'
-  gem'rake', '~> 13.0.0'
-  gem'rspec', '~> 3.10.0'
-  gem'rubocop', '~> 1.11.0'
-  gem'rubocop-rspec', '~> 2.2.0'
-  gem'simplecov', '~> 0.21.0'
-  gem'vcr', '~> 6.0.0'
-  gem'webmock', '~> 3.12.0'
+  gem 'bundler', '>= 2.5'
+  gem 'dotenv', '~> 3.1'
+  gem 'pry', '~> 0.14.2'
+  gem 'rails'
+  gem 'rake', '~> 13.2'
+  gem 'rspec', '~> 3.13'
+  gem 'rubocop', '~> 1.69'
+  gem 'rubocop-rspec', '~> 3.2'
+  gem 'simplecov', '~> 0.22'
+  gem 'vcr', '~> 6.3'
+  gem 'webmock', '~> 3.24'
 end
 
 gemspec
